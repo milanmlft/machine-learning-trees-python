@@ -9,8 +9,6 @@ The dataset that we will be using for this project is a subset of the [eICU Coll
 
 <!-- this is an html comment -->
 
-{% comment %} This is a comment in Liquid {% endcomment %}
-
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 
 ## Prerequisites
