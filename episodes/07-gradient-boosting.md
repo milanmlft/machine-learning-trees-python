@@ -1,17 +1,21 @@
 ---
-title: "Gradient boosting"
+title: Gradient boosting
 teaching: 20
 exercises: 10
-questions:
-- "What is the state of the art in tree models?"
-objectives:
-- "Train gradient boosted models."
-- "Visualise the decision boundaries."
-keypoints:
-- "As a “boosting” method, gradient boosting involves iteratively building trees, aiming to improve upon misclassifications of the previous tree."
-- "Gradient boosting also borrows the concept of sub-sampling the variables (just like Random Forests), which can help to prevent overfitting."
-- "The performance gains come at the cost of interpretability."
 ---
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- Train gradient boosted models.
+- Visualise the decision boundaries.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- What is the state of the art in tree models?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Gradient boosting
 
@@ -31,7 +35,16 @@ txt = 'Gradient boosted tree (final decision surface)'
 glowyr.plot_model_pred_2d(mdl, x_train, y_train, title=txt)
 ```
 
-![](../fig/section7-fig1.png){: width="900px"}
+![](fig/section7-fig1.png){ width="900px"}
 
-{% include links.md %}
+
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- As a “boosting” method, gradient boosting involves iteratively building trees, aiming to improve upon misclassifications of the previous tree.
+- Gradient boosting also borrows the concept of sub-sampling the variables (just like Random Forests), which can help to prevent overfitting.
+- The performance gains come at the cost of interpretability.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 

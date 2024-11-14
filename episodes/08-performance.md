@@ -1,15 +1,20 @@
 ---
-title: "Performance"
+title: Performance
 teaching: 20
 exercises: 10
-questions:
-- "How well do our predictive models perform?"
-objectives:
-- "Evaluate the performance of our different models."
-keypoints:
-- "There is a large performance gap between different types of tree."
-- "Boosted models typically perform strongly."
 ---
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- Evaluate the performance of our different models.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- How well do our predictive models perform?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Comparing model performance
 
@@ -36,11 +41,19 @@ for i, curr_mdl in enumerate(clf):
     glowyr. plot_model_pred_2d(clf[curr_mdl], x_test, y_test, title=curr_mdl)
 ```
 
-![](../fig/section8-fig1.png){: width="900px"}
+![](fig/section8-fig1.png){ width="900px"}
 
 Here we can see that quantitatively, gradient boosting has produced the highest discrimination among all the models (~0.91). You'll see that some of the models appear to have simpler decision surfaces, which tends to result in improved generalization on a held-out test set (though not always!).
 
 To make appropriate comparisons, we should calculate 95% confidence intervals on these performance estimates. This can be done a number of ways. A simple but effective approach is to use bootstrapping, a resampling technique. In bootstrapping, we generate multiple datasets from the test set (allowing the same data point to be sampled multiple times). Using these datasets, we can then estimate the confidence intervals.
 
-{% include links.md %}
+
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- There is a large performance gap between different types of tree.
+- Boosted models typically perform strongly.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 

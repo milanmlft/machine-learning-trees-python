@@ -1,20 +1,23 @@
 ---
-title: "Variance"
+title: Variance
 teaching: 20
 exercises: 10
-questions:
-- "Why are decision trees 'high variance'?"
-- "What is overfitting?"
-- "Why might you choose to prune a tree?"
-- "What is the benefit is combining trees?"
-objectives:
-- "Understand variance in the context of decision trees"
-keypoints:
-- "Overfitting is a problem that occurs when our algorithm is too closely aligned to our training data."
-- "Models that are overfitted may not generalise well to “unseen” data."
-- "Pruning is one approach for helping to prevent overfitting."
-- "By combining many of instances of “high variance” classifiers, we can end up with a single classifier with low variance."
 ---
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
+- Understand variance in the context of decision trees
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- Why are decision trees 'high variance'?
+- What is overfitting?
+- Why might you choose to prune a tree?
+- What is the benefit is combining trees?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Increasing the depth of our tree
 
@@ -30,7 +33,7 @@ plt.figure(figsize=[10,8])
 glowyr.plot_model_pred_2d(mdl, x_train, y_train, title="Decision tree (depth 5)")
 ```
 
-![Simple tree (depth 5)](../fig/section3-fig1.png){: width="600px"}
+![](fig/section3-fig1.png){alt='Simple tree (depth 5)' width="600px"}
 
 Now our tree is more complicated! We can see a few vertical boundaries as well as the horizontal one from before. Some of these we may like, but some appear unnatural. Let's look at the tree itself.
 
@@ -39,29 +42,40 @@ graph = glowyr.create_graph(mdl,feature_names=features)
 Image(graph.create_png())
 ```
 
-![Simple tree (depth 5)](../fig/section3-fig2.png){: width="900px"}
+![](fig/section3-fig2.png){alt='Simple tree (depth 5)' width="900px"}
 
 ## Overfitting
 
-Looking at the tree, we can see that there are some very specific rules. 
+Looking at the tree, we can see that there are some very specific rules.
 
-> ## Question
-> a) Consider a patient aged 45 years with an acute physiology score of 100. Using the image of the tree, work through the nodes until your can make a prediction. What outcome does your model predict?   
-> b) What is the gini impurity of the final node, and why?   
-> c) Does the decision that led to this final node seem sensible to you? Why?    
-> > ## Answer
-> > a) From the top of the tree, we would work our way down:
-> > 
-> > - acutePhysiologyScore <= 78.5? No.
-> > - acutePhysiologyScore <= 104.5? Yes.
-> > - age <= 76.5? Yes
-> > - age <= 55.5. Yes.
-> > - acutePhysiologyScore <= 96.5? No.    
-> > 
-> > b) This leads us to our single node with a gini impurity of 0.  The node contains a single class (i.e. it is completely "pure".).   
-> > c) Having an entire rule based upon this one observation seems silly, but it is perfectly logical at the moment. The only objective the algorithm cares about is minimizing the gini impurity.      
-> {: .solution}
-{: .challenge} 
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Question
+
+a) Consider a patient aged 45 years with an acute physiology score of 100. Using the image of the tree, work through the nodes until your can make a prediction. What outcome does your model predict?  
+b) What is the gini impurity of the final node, and why?  
+c) Does the decision that led to this final node seem sensible to you? Why?
+
+:::::::::::::::  solution
+
+## Answer
+
+a) From the top of the tree, we would work our way down:
+
+- acutePhysiologyScore \<= 78.5? No.
+- acutePhysiologyScore \<= 104.5? Yes.
+- age \<= 76.5? Yes
+- age \<= 55.5. Yes.
+- acutePhysiologyScore \<= 96.5? No.
+
+b) This leads us to our single node with a gini impurity of 0.  The node contains a single class (i.e. it is completely "pure".).  
+c) Having an entire rule based upon this one observation seems silly, but it is perfectly logical at the moment. The only objective the algorithm cares about is minimizing the gini impurity.  
+
+
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Overfitting is a problem that occurs when our algorithm is too closely aligned to our training data. The result is that the model may not generalise well to "unseen" data, such as observations for new patients entering a critical care unit. This is where "pruning" comes in.
 
@@ -75,16 +89,16 @@ graph = glowyr.create_graph(mdl, feature_names=features)
 Image(graph.create_png())
 ```
 
-![Simple tree (depth 5)](../fig/section3-fig3.png){: width="900px"}
+![](fig/section3-fig3.png){alt='Simple tree (depth 5)' width="900px"}
 
-Above, we can see that our second tree is (1) smaller in depth, and (2) never splits a node with <= 10 samples. We can look at the decision surface for this tree:
+Above, we can see that our second tree is (1) smaller in depth, and (2) never splits a node with \<= 10 samples. We can look at the decision surface for this tree:
 
 ```python
 plt.figure(figsize=[10,8])
 glowyr.plot_model_pred_2d(mdl, x_train, y_train, title="Pruned decision tree")
 ```
 
-![Simple tree (depth 5)](../fig/section3-fig4.png){: width="600px"}
+![](fig/section3-fig4.png){alt='Simple tree (depth 5)' width="600px"}
 
 Our pruned decision tree has a more intuitive boundary, but does make some errors. We have reduced our performance in an effort to simplify the tree. This is the classic machine learning problem of trading off complexity with error.
 
@@ -120,7 +134,7 @@ for i in range(3):
     glowyr.plot_model_pred_2d(mdl, x_temp, y_temp, title=txt)
 ```
 
-![Simple tree (depth 5)](../fig/section3-fig5.png){: width="900px"}
+![](fig/section3-fig5.png){alt='Simple tree (depth 5)' width="900px"}
 
 Above we can see that we are using random subsets of data, and as a result, our decision boundary can change quite a bit. As you could guess, we actually don't want a model that randomly works well and randomly works poorly.
 
@@ -128,14 +142,35 @@ There is an old joke: two farmers and a statistician go hunting. They see a deer
 
 While it doesn't quite hold in real life, it turns out that this principle does hold for decision trees. Combining them in the right way ends up building powerful models.
 
-> ## Question
-> a) Why are decision trees considered have high variance?     
-> b) An "ensemble" is the name used for a machine learning model that aggregates the decisions of multiple sub-models. Why might creating ensembles of decision trees be a good idea?   
-> > ## Answer
-> > a) Minor changes in the data used to train decision trees can lead to very different model performance.      
-> > b) By combining many of instances of "high variance" classifiers (decision trees), we can end up with a single classifier with low variance.   
-> {: .solution}
-{: .challenge} 
+:::::::::::::::::::::::::::::::::::::::  challenge
 
-{% include links.md %}
+## Question
+
+a) Why are decision trees considered have high variance?  
+b) An "ensemble" is the name used for a machine learning model that aggregates the decisions of multiple sub-models. Why might creating ensembles of decision trees be a good idea?
+
+:::::::::::::::  solution
+
+## Answer
+
+a) Minor changes in the data used to train decision trees can lead to very different model performance.  
+b) By combining many of instances of "high variance" classifiers (decision trees), we can end up with a single classifier with low variance.  
+
+
+
+:::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- Overfitting is a problem that occurs when our algorithm is too closely aligned to our training data.
+- Models that are overfitted may not generalise well to “unseen” data.
+- Pruning is one approach for helping to prevent overfitting.
+- By combining many of instances of “high variance” classifiers, we can end up with a single classifier with low variance.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 

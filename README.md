@@ -1,6 +1,6 @@
 # Introduction to Tree Models in Python
 
-Decision trees are a family of algorithms that are based around a tree-like structure of decision rules. These algorithms often perform well in tasks such as prediction and classification. 
+Decision trees are a family of algorithms that are based around a tree-like structure of decision rules. These algorithms often perform well in tasks such as prediction and classification.
 
 This lesson explores the properties of tree models in the context of mortality prediction. The lesson also covers topics such as overfitting, ensemble models, boosting, and bagging.
 
@@ -13,10 +13,9 @@ It is the second lesson in the machine learning curriculum. In later lessons we 
 
 ## Workshop schedule
 
-These lessons are being run at University of Edinburgh as part of the Ed-DaSH Data Science training programme for Health and Biosciences. 
+These lessons are being run at University of Edinburgh as part of the Ed-DaSH Data Science training programme for Health and Biosciences.
 
-The first lessons were taught in May: https://edcarp.github.io/2022-05-24_ed-dash_machine-learning/. For a list of future lessons, see: https://edcarp.github.io/Ed-DaSH/workshops
-
+The first lessons were taught in May: <https://edcarp.github.io/2022-05-24_ed-dash_machine-learning/>. For a list of future lessons, see: <https://edcarp.github.io/Ed-DaSH/workshops>
 
 ## Contributing
 
@@ -29,28 +28,25 @@ how to write new episodes.
 
 Please see the current list of [issues](https://github.com/carpentries-incubator/machine-learning-trees-python/issues) for ideas for contributing to this
 repository. For making your contribution, we use the GitHub flow, which is
-nicely explained in the chapter [Contributing to a Project](http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in Pro Git
+nicely explained in the chapter [Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) in Pro Git
 by Scott Chacon.
-Look for the tag ![good_first_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg). This indicates that the maintainers will welcome a pull request fixing this issue.
-
+Look for the tag ![good\_first\_issue](https://img.shields.io/badge/-good%20first%20issue-gold.svg). This indicates that the maintainers will welcome a pull request fixing this issue.
 
 ## Maintainer(s)
 
 Current maintainers of this lesson are:
 
-* Tom Pollard ([Website](https://people.csail.mit.edu/tpollard/); [GitHub](https://github.com/tompollard))
-
+- Tom Pollard ([Website](https://people.csail.mit.edu/tpollard/); [GitHub](https://github.com/tompollard))
 
 ## Authors
 
-A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
+A list of contributors to the lesson can be found in <AUTHORS>
 
 ## Citation
 
-To cite this lesson, please consult with [CITATION](CITATION)
+To cite this lesson, please consult with <CITATION>
 
-[cdh]: https://cdh.carpentries.org
-[cdh-topic-tags]: https://cdh.carpentries.org/the-carpentries-incubator.html#topic-tags
-[change-default-branch]: https://docs.github.com/en/github/administering-a-repository/changing-the-default-branch
-[community-lessons]: https://carpentries.org/community-lessons
 [lesson-example]: https://carpentries.github.io/lesson-example
+
+
+
