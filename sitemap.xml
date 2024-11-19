@@ -34,7 +34,13 @@
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/discuss.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/images.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/index.html</loc>
@@ -73,16 +79,34 @@
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/discuss.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/key-points.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/machine-learning-trees-python/profiles.html</loc>
