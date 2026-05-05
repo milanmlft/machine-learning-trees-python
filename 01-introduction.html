@@ -412,7 +412,7 @@ mortality.</p>
 </div>
 <p>The data has been assigned to a dataframe called <code>cohort</code>.
 Let’s take a look at the first few lines:</p>
-<table class="table"><colgroup><col width="16%"><col width="3%"><col width="3%"><col width="7%"><col width="8%"><col width="9%"><col width="5%"><col width="11%"><col width="4%"><col width="2%"><col width="4%"><col width="5%"><col width="7%"><col width="1%"><col width="7%"></colgroup><thead><tr class="header"><th>index</th>
+<table class="table"><colgroup><col width="16%"><col width="3%"><col width="3%"><col width="7%"><col width="8%"><col width="9%"><col width="5%"><col width="11%"><col width="4%"><col width="2%"><col width="4%"><col width="5%"><col width="7%"><col width="1%"><col width="7%"></colgroup><thead><tr><th>index</th>
 <th>gender</th>
 <th>age</th>
 <th>admissionweight</th>
@@ -427,7 +427,7 @@ Let’s take a look at the first few lines:</p>
 <th>respiratoryrate</th>
 <th>wbc</th>
 <th>admissionheight</th>
-</tr></thead><tbody><tr class="odd"><td>0</td>
+</tr></thead><tbody><tr><td>0</td>
 <td>Female</td>
 <td>48</td>
 <td>86.4</td>
@@ -442,7 +442,7 @@ Let’s take a look at the first few lines:</p>
 <td>39.0</td>
 <td>6.1</td>
 <td>177.8</td>
-</tr><tr class="even"><td>1</td>
+</tr><tr><td>1</td>
 <td>Female</td>
 <td>59</td>
 <td>66.6</td>
@@ -457,7 +457,7 @@ Let’s take a look at the first few lines:</p>
 <td>32.0</td>
 <td>25.5</td>
 <td>170.2</td>
-</tr><tr class="odd"><td>2</td>
+</tr><tr><td>2</td>
 <td>Male</td>
 <td>31</td>
 <td>66.8</td>
@@ -472,7 +472,7 @@ Let’s take a look at the first few lines:</p>
 <td>34.0</td>
 <td>21.4</td>
 <td>188.0</td>
-</tr><tr class="even"><td>3</td>
+</tr><tr><td>3</td>
 <td>Female</td>
 <td>51</td>
 <td>77.1</td>
@@ -487,7 +487,7 @@ Let’s take a look at the first few lines:</p>
 <td>26.0</td>
 <td>-1.0</td>
 <td>160.0</td>
-</tr><tr class="odd"><td>4</td>
+</tr><tr><td>4</td>
 <td>Female</td>
 <td>48</td>
 <td>63.4</td>
@@ -535,115 +535,115 @@ average age of patients over 89 in the dataset).</p>
 <span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="bu">print</span>(t1.tabulate(tablefmt <span class="op">=</span> <span class="st">"github"</span>))</span></code></pre>
 </div>
 <p>The table below shows summary characteristics of our dataset:</p>
-<table class="table"><colgroup><col width="34%"><col width="7%"><col width="7%"><col width="15%"><col width="17%"><col width="20%"></colgroup><thead><tr class="header"><th></th>
+<table class="table"><colgroup><col width="34%"><col width="7%"><col width="7%"><col width="15%"><col width="17%"><col width="20%"></colgroup><thead><tr><th></th>
 <th></th>
 <th>Missing</th>
 <th>Overall</th>
 <th>ALIVE</th>
 <th>EXPIRED</th>
-</tr></thead><tbody><tr class="odd"><td>n</td>
+</tr></thead><tbody><tr><td>n</td>
 <td></td>
 <td></td>
 <td>536</td>
 <td>488</td>
 <td>48</td>
-</tr><tr class="even"><td>gender, n (%)</td>
+</tr><tr><td>gender, n (%)</td>
 <td>Female</td>
 <td>0</td>
 <td>305 (56.9)</td>
 <td>281 (57.6)</td>
 <td>24 (50.0)</td>
-</tr><tr class="odd"><td></td>
+</tr><tr><td></td>
 <td>Male</td>
 <td></td>
 <td>230 (42.9)</td>
 <td>207 (42.4)</td>
 <td>23 (47.9)</td>
-</tr><tr class="even"><td></td>
+</tr><tr><td></td>
 <td>Unknown</td>
 <td></td>
 <td>1 (0.2)</td>
 <td></td>
 <td>1 (2.1)</td>
-</tr><tr class="odd"><td>age, mean (SD)</td>
+</tr><tr><td>age, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>63.4 (17.4)</td>
 <td>62.2 (17.4)</td>
 <td>75.2 (12.6)</td>
-</tr><tr class="even"><td>admissionweight, mean (SD)</td>
+</tr><tr><td>admissionweight, mean (SD)</td>
 <td></td>
 <td>16</td>
 <td>81.8 (25.0)</td>
 <td>82.3 (25.1)</td>
 <td>77.0 (23.3)</td>
-</tr><tr class="odd"><td>unabridgedhosplos, mean (SD)</td>
+</tr><tr><td>unabridgedhosplos, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>5.6 (6.8)</td>
 <td>5.7 (6.7)</td>
 <td>4.3 (7.8)</td>
-</tr><tr class="even"><td>acutephysiologyscore, mean (SD)</td>
+</tr><tr><td>acutephysiologyscore, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>41.7 (22.7)</td>
 <td>38.5 (18.8)</td>
 <td>74.3 (31.7)</td>
-</tr><tr class="odd"><td>apachescore, mean (SD)</td>
+</tr><tr><td>apachescore, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>53.6 (25.1)</td>
 <td>49.9 (21.1)</td>
 <td>91.8 (30.5)</td>
-</tr><tr class="even"><td>heartrate, mean (SD)</td>
+</tr><tr><td>heartrate, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>101.5 (32.9)</td>
 <td>100.3 (31.9)</td>
 <td>113.9 (40.0)</td>
-</tr><tr class="odd"><td>meanbp, mean (SD)</td>
+</tr><tr><td>meanbp, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>89.6 (41.5)</td>
 <td>90.7 (40.7)</td>
 <td>78.8 (47.6)</td>
-</tr><tr class="even"><td>creatinine, mean (SD)</td>
+</tr><tr><td>creatinine, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>0.8 (2.0)</td>
 <td>0.8 (2.0)</td>
 <td>1.4 (1.8)</td>
-</tr><tr class="odd"><td>temperature, mean (SD)</td>
+</tr><tr><td>temperature, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>35.6 (5.6)</td>
 <td>35.9 (4.8)</td>
 <td>32.9 (10.4)</td>
-</tr><tr class="even"><td>respiratoryrate, mean (SD)</td>
+</tr><tr><td>respiratoryrate, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>27.4 (15.5)</td>
 <td>26.8 (15.4)</td>
 <td>33.9 (15.2)</td>
-</tr><tr class="odd"><td>wbc, mean (SD)</td>
+</tr><tr><td>wbc, mean (SD)</td>
 <td></td>
 <td>0</td>
 <td>6.5 (7.6)</td>
 <td>6.2 (7.1)</td>
 <td>9.9 (11.2)</td>
-</tr><tr class="even"><td>admissionheight, mean (SD)</td>
+</tr><tr><td>admissionheight, mean (SD)</td>
 <td></td>
 <td>8</td>
 <td>168.4 (14.5)</td>
 <td>168.2 (13.6)</td>
 <td>170.3 (21.5)</td>
-</tr><tr class="odd"><td>actualhospitalmortality_enc, n (%)</td>
+</tr><tr><td>actualhospitalmortality_enc, n (%)</td>
 <td>0</td>
 <td>0</td>
 <td>488 (91.0)</td>
 <td>488 (100.0)</td>
 <td></td>
-</tr><tr class="even"><td></td>
+</tr><tr><td></td>
 <td>1</td>
 <td></td>
 <td>48 (9.0)</td>
@@ -671,7 +671,7 @@ Apache Score</a>.<br></li>
   Answer
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha"><li>91% of patients survived their stay. There is 9% in-hospital
 mortality.<br></li>
@@ -725,7 +725,7 @@ algorithm?</li>
   Answer
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: lower-alpha"><li>We want to be able to evaluate our model on data that it has not
 seen before. If we evaluate our model on data that it is trained upon,
@@ -811,7 +811,7 @@ analysis is reproducible.</li>
   "identifier": "https://carpentries-incubator.github.io/machine-learning-trees-python/01-introduction.html",
   "dateCreated": "2021-10-22",
   "dateModified": "2024-11-14",
-  "datePublished": "2026-04-28"
+  "datePublished": "2026-05-05"
 }
 
   </script><script>
